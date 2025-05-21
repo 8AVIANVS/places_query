@@ -11,13 +11,13 @@ GMAPS_KEY = os.getenv("GMAPS_KEY")
 gmaps = googlemaps.Client(key=GMAPS_KEY)
 
 # query = input("Enter a query: ")
-query = "metal recyclers near New York"
+query = "aluminum miners near Kitimat, British Columbia, Canada"
 places_data = []
 
 # Parse location from query
 location_parts = query.split("near ")
 search_term = location_parts[0].strip()
-location = location_parts[1].strip() if len(location_parts) > 1 else "Topeka, Kansas"
+location = location_parts[1].strip() if len(location_parts) > 1 else ""
 
 # Get geocode for the location to use as center point
 geocode_result = gmaps.geocode(location)
